@@ -5,6 +5,6 @@ pid='X'
 problem(
   time_limit=1.0,
   id=pid,
-  title=pid + ": Your Problem Name",
+  title=pid + ": Counting Shortest Paths",
   reference_solution='matsu7874_py',
   )
