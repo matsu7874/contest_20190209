@@ -3,7 +3,7 @@ import random
 
 NUM_TESTCASE = 40
 MIN_LENGTH = 1
-MAX_LENGTH = 10**3
+MAX_LENGTH = 50
 
 testcases = set()
 testcases.add(('b', 'BB'))
