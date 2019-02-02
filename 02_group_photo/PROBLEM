@@ -6,6 +6,6 @@ problem(
   time_limit=1.0,
   id=pid,
   title=pid + ": Group Photo",
-  #reference_solution='???',
+  reference_solution='matsu7874_simulation',
   )
 
