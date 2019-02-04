@@ -52,7 +52,7 @@ int main(void) {
   VI t(n);
   REP(i, 0, n) cin >> s[i];
   REP(i, 0, n) cin >> t[i];
-  REP(i, 1, n) {
+  REP(i, 0, n) {
     cout << frac(s[i] - t[i], s[0]) << endl;
   }
 }
