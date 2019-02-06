@@ -20,6 +20,8 @@ int main() {
     vector<LL> cnt(N, 0);
     dist[0] = 0;
     cnt[0] = 1;
+    
+    LL MOD = 1000000007;
     priority_queue<tuple<LL,LL>> pq;
     pq.push({0, 0});
     vector<int> used(N, 0);
@@ -39,6 +41,7 @@ int main() {
                 cnt[u] = 0;
             }
             cnt[u] += cnt[v];
+            cnt[u] %= MOD;
             pq.push({-dist[u], u});
         }
     }
