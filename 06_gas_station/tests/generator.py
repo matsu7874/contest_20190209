@@ -63,11 +63,12 @@ def main():
             ((i*MAX_D, 0) for i in range(MAX_N))
         )
     )
+    d = int(MAX_D*0.8)
     testcases.add(
         Case(
             4,
-            MAX_N, int(MAX_D*0.8),
-            ((i*int(MAX_D**0.5), i*int(MAX_D**0.5)) for i in range(MAX_N))
+            MAX_N, d,
+            ((i*int(d/(2**0.5)), i*int(d/(2**0.5))) for i in range(MAX_N))
         )
     )
     testcases.add(
