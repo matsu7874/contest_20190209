@@ -67,6 +67,13 @@ def main():
             (1, 2, 1),
         ))
     )
+    testcases.add(
+        Case(4, 3, (
+            (1, 3, 1),
+            (2, 3, 1),
+            (2, 4, 1),
+        ))
+    )
     testcases.add(generate_graph_strong(5))
     testcases.add(generate_graph(5, MAX_EDGE, 1))
     testcases.add(generate_graph_strong(int(MAX_EDGE**0.5)))
