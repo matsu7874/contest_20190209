@@ -1,0 +1,7 @@
+# -*- coding: utf-8; mode: python -*-
+
+## Solution
+cxx_solution(src='main.cpp', flags=[], challenge_cases=[]) # -std=c++11 -O2 as default
+
+## Score
+expected_score(0)

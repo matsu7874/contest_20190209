@@ -32,8 +32,8 @@ const ll mod = 1e9 + 7;
 
 const int N = 10010;
 
-PIL dp[N];
-vector<PI> p[N];
+PI dp[N];
+vector<PIL> p[N];
 
 int main(void) {
   ios::sync_with_stdio(false);
@@ -45,36 +45,24 @@ int main(void) {
     cin >> s >> t >> c;
     s--, t--;
     p[t].push_back(PI(s, c));
-    p[s].push_back(PI(t, c));
   }
   const int inf = 1.5e9;
   REP(i, 0, n) dp[i] = PI(inf, 0);
-  priority_queue<PI, vector<PI>, greater<PI> > que;
-  que.push(PI(0, 0));
   dp[0] = PI(0, 1);
-  while (!que.empty()) {
-    PI wv = que.top(); que.pop();
-    int w = wv.first;
-    int v = wv.second;
-    // cerr << "seen " << w << " " << v << endl;
-    if (w > dp[v].first) { continue; }
-    for (auto u: p[v]) {
-      int to = u.first;
-      int cost = u.second;
-      int d = dp[v].first + cost;
-      ll cnt = dp[v].second;
-      if (dp[to].first == d) {
-        // cerr << "UPD " << v << " " << cnt << endl;
-        dp[to].second += cnt;
-        dp[to].second %= mod;
-      } else if (dp[to].first > d) {
-        // cerr << to << " " << d << " " << dp[to].first << " " << dp[to].second << endl;
-        dp[to].first = d;
-        dp[to].second = cnt;
-        que.push(PI(d, to));
+  REP(i, 1, n) {
+    PI ma(inf, 0);
+    for (auto u: p[i]) {
+      int d = dp[u.first].first + u.second;
+      ll cnt = dp[u.first].second;
+      if (ma.first == d) {
+        ma.second += cnt;
+        ma.second %= mod;
+      } else if (ma.first > d) {
+        ma.first = d;
+        ma.second = cnt;
       }
     }
+    dp[i] = ma;
   }
-  REP(i, 0, n) cerr << " " << dp[i].first << " " << dp[i].second << endl;
   cout << dp[n - 1].second << endl;
 }
