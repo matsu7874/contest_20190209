@@ -5,7 +5,7 @@ import random
 
 NUM_TESTCASE = 40
 
-MAX_N = 10**3
+MAX_N = 2*10**2
 MIN_N = 1
 MAX_C = 10
 MIN_C = 1
