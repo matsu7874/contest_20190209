@@ -6,6 +6,6 @@ problem(
   time_limit=1.0,
   id=pid,
   title=pid + ": Path on Triangle",
-  #reference_solution='???',
+  reference_solution='tokoharuAC',
   )
 
