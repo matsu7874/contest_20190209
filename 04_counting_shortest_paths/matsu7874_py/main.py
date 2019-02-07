@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import heapq
 
+mod = 10**9+7
 
 def main():
     n, m = map(int, input().split())
@@ -31,7 +32,7 @@ def main():
     # print(graph)
     # print(dist)
     # print(cnt)
-    print(cnt[n-1])
+    print(cnt[n-1] % mod)
 
 
 if __name__ == "__main__":
