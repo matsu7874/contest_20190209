@@ -43,11 +43,9 @@ int main() {
        LL b;
        cin >> b;
        if(i+K<=N-1) data.push(-F[i+K], i+K);
-       data.pop(i-K-1);
+       data.pop(i-K);
        LL tmp = data.get().first;
        ans = max(ans, b - tmp);
-       cout << i << endl;
-        
     }
     cout << ans << endl;
     
