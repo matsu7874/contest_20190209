@@ -27,6 +27,19 @@ testcases.add(Case(
     (1, 3, 4, 5),
     (4, 2, 1, 1)
 ))
+
+testcases.add(Case(
+    N_MAX, K_MIN,
+    (F_MIN+i for i in range(N_MAX)),
+    (B_MAX-i for i in range(N_MAX)),
+))
+
+testcases.add(Case(
+    N_MAX, K_MIN,
+    (F_MAX-i for i in range(N_MAX)),
+    (B_MAX-i for i in range(N_MAX)),
+))
+
 size_testcase = len(testcases)
 
 while size_testcase < NUM_TESTCASE:

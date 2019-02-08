@@ -6,6 +6,6 @@ problem(
   time_limit=1.0,
   id=pid,
   title=pid + ": Ichigeki",
-  reference_solution='tokoharuAC',
+  reference_solution='matsu7874',
   )
 
